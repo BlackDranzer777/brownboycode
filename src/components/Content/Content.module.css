@@ -1,0 +1,120 @@
+.content {
+  padding: 80px 40px;
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title {
+  font-family: var(--font-hand);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: var(--bg);
+}
+
+.igLink {
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+  color: var(--accent-yellow);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+.igLink:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  border: 2px solid var(--bg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: rotate(var(--rotate));
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 4px 4px 0 var(--bg);
+}
+
+.card:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 6px 8px 0 var(--accent);
+}
+
+.iconWrap {
+  display: flex;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cardTitle {
+  font-family: var(--font-hand);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--bg);
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.tag {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--accent-yellow);
+  margin-top: auto;
+}
+
+.igCta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.arrow {
+  width: 80px;
+  height: 40px;
+  transform: rotate(10deg);
+}
+
+.igNote {
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+  color: var(--bg);
+  transform: rotate(-2deg);
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    flex-direction: column;
+  }
+}

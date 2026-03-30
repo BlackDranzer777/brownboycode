@@ -1,0 +1,157 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: var(--bg);
+}
+
+.logo {
+  font-family: var(--font-hand);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+/* Desktop links */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.links a {
+  position: relative;
+  transition: color 0.2s;
+}
+
+.links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.links a:hover::after { width: 100%; }
+.links a:hover { text-decoration: none; color: var(--accent); }
+
+.cta {
+  background: var(--ink);
+  color: var(--bg) !important;
+  padding: 8px 18px;
+  border: 2px solid var(--ink);
+  transform: rotate(-1deg);
+  display: inline-block;
+  transition: transform 0.2s, background 0.2s !important;
+}
+
+.cta:hover {
+  transform: rotate(0deg) scale(1.04) !important;
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+}
+
+.cta::after { display: none !important; }
+
+/* Hamburger — hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+
+/* open state */
+.barTop_open  { transform: translateY(7.5px) rotate(45deg); }
+.barMid_open  { opacity: 0; }
+.barBot_open  { transform: translateY(-7.5px) rotate(-45deg); }
+.barTop, .barMid, .barBot { transform: none; opacity: 1; }
+
+/* Mobile drawer — hidden by default */
+.drawer {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: var(--bg);
+  border-bottom: 2px solid var(--ink);
+  transform: translateY(-110%);
+  transition: transform 0.3s ease;
+}
+
+.drawerOpen {
+  transform: translateY(0);
+}
+
+.drawerLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px;
+  gap: 24px;
+}
+
+.drawerLinks a {
+  font-family: var(--font-hand);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+
+.drawerLinks a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.drawerCta {
+  background: var(--ink);
+  color: var(--bg) !important;
+  padding: 12px 24px;
+  display: inline-block;
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--accent);
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .nav {
+    padding: 16px 24px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
