@@ -11,7 +11,7 @@ export default function Footer() {
 
         <div className={styles.links}>
           <a href="https://www.instagram.com/brownboycode" target="_blank" rel="noopener noreferrer">instagram</a>
-          <a href="https://topmate.io" target="_blank" rel="noopener noreferrer">topmate</a>
+          <a href="https://topmate.io/brownboycode" target="_blank" rel="noopener noreferrer">topmate</a>
           <a href="#collab">work with me</a>
         </div>
 

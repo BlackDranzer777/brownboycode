@@ -33,7 +33,7 @@ export default function BookCall() {
           </ul>
 
           <a
-            href="https://topmate.io"
+            href="https://topmate.io/brownboycode"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.btn}
