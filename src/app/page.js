@@ -6,6 +6,8 @@ import BookCall from "@/components/BookCall/BookCall";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import TornEdge from "@/components/TornEdge/TornEdge";
+import Brands from "@/components/Brands/Brands";
+import Stadiums from "@/components/Stadiums/Stadiums";
 
 export default function Home() {
   return (
@@ -26,6 +28,8 @@ export default function Home() {
         <TornEdge fromDark={true} />
 
         {/* cream */}
+        <Brands />
+        <Stadiums />
         <BrandCollab />
         <BookCall />
 

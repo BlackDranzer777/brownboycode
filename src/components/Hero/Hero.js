@@ -14,7 +14,7 @@ export default function Hero() {
           <p className={styles.handle}>@brownboycode</p>
           <h1 className={styles.name}>Kunal<br />Dutt</h1>
           <p className={styles.tagline}>
-            Football. Books. Life.<br />
+            Football. Mindset. Life.<br />
             <span className={styles.highlight}>& everything in between.</span>
           </p>
           <div className={styles.badge}>
@@ -59,7 +59,7 @@ export default function Hero() {
               <line x1="7.5" y1="8.5" x2="5" y2="12" stroke="#fff" strokeWidth="1" strokeLinecap="round"/>
               <line x1="7" y1="6.5" x2="3" y2="5" stroke="#fff" strokeWidth="1" strokeLinecap="round"/>
             </svg>
-            CR7 fan
+            Based in Europe
           </div>
         </div>
       </div>
