@@ -19,6 +19,116 @@
   white-space: nowrap;
 }
 
+/* Right-side controls group (links + theme toggle + hamburger) */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Theme toggle button */
+.themeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 2px solid var(--ink);
+  padding: 6px 14px;
+  cursor: pointer;
+  transform: rotate(-1deg);
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+
+.themeBtn:hover {
+  transform: rotate(0deg) scale(1.04);
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.themeDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 1.5px solid var(--ink);
+}
+
+.themeBtn:hover .themeDot {
+  border-color: var(--bg);
+}
+
+/* ===== loud-house theme overrides (scoped, kleon untouched) ===== */
+
+/* Logo becomes the orange "house badge" with white outlined comic lettering */
+:global([data-theme="loud-house"]) .logo {
+  background: var(--accent);
+  color: #fff;
+  -webkit-text-stroke: 1.5px var(--ink);
+  paint-order: stroke fill;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 14px 6px;
+  border: 3px solid var(--ink);
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: rotate(-2deg);
+}
+
+/* Theme button gets the chunky comic outline + hard offset shadow */
+:global([data-theme="loud-house"]) .themeBtn {
+  border-width: 3px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 var(--ink);
+  text-transform: uppercase;
+}
+
+/* ===== daily-dutt: masthead ===== */
+:global([data-theme="daily-dutt"]) .nav {
+  border-bottom: 3px double var(--ink);
+}
+:global([data-theme="daily-dutt"]) .logo {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 2px 8px;
+}
+
+/* ===== blueprint: title-block label ===== */
+:global([data-theme="blueprint"]) .nav {
+  border-bottom: 1.5px solid var(--ink);
+}
+:global([data-theme="blueprint"]) .logo {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  border: 1.5px solid var(--ink);
+  padding: 6px 10px;
+}
+
+/* ===== comic: red burst badge with outlined Bangers lettering ===== */
+:global([data-theme="comic"]) .logo {
+  font-family: var(--font-bangers);
+  background: var(--accent);
+  color: #fff;
+  -webkit-text-stroke: 1.5px var(--ink);
+  paint-order: stroke fill;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border: 3px solid var(--ink);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 var(--ink);
+  transform: rotate(-3deg);
+}
+
 /* Desktop links */
 .links {
   display: flex;

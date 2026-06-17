@@ -4,6 +4,14 @@
   overflow: hidden;
 }
 
+/* These themes use panels/rules/gutters instead of torn-paper transitions */
+:global([data-theme="loud-house"]) .wrapper,
+:global([data-theme="daily-dutt"]) .wrapper,
+:global([data-theme="blueprint"]) .wrapper,
+:global([data-theme="comic"]) .wrapper {
+  display: none;
+}
+
 .svg {
   display: block;
   width: 100%;

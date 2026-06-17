@@ -54,6 +54,19 @@
   letter-spacing: -2px;
 }
 
+/* The chunky display fonts need breathing room vs. the tight script default */
+:global([data-theme="loud-house"]) .name,
+:global([data-theme="comic"]) .name {
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+:global([data-theme="daily-dutt"]) .name,
+:global([data-theme="blueprint"]) .name {
+  letter-spacing: -1px;
+  line-height: 0.95;
+}
+
 .tagline {
   font-family: var(--font-body);
   font-size: 1.1rem;
