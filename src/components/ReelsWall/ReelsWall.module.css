@@ -1,0 +1,239 @@
+.section {
+  padding: 80px 40px 100px;
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title {
+  font-family: var(--font-hand);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: var(--bg);
+}
+
+.igLink {
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+  color: var(--accent-yellow);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+.igLink:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* A phone taped to the wall */
+.phone {
+  position: relative;
+  border: 3px solid var(--bg);
+  border-radius: 30px;
+  padding: 14px 12px 12px;
+  background: var(--ink);
+  box-shadow: 6px 6px 0 var(--bg);
+  transform: rotate(var(--rotate));
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.phone:hover {
+  transform: rotate(0deg) translateY(-6px);
+  box-shadow: 8px 10px 0 var(--accent);
+}
+
+.tape {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 90px;
+  height: 26px;
+  background: var(--accent-yellow);
+  opacity: 0.9;
+  border-left: 2px dashed rgba(0, 0, 0, 0.25);
+  border-right: 2px dashed rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.notch {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--bg);
+  opacity: 0.5;
+}
+
+.screen {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+  margin-top: 8px;
+}
+
+/* Self-hosted video and the placeholder get a true phone screen. */
+.screenTall {
+  aspect-ratio: 9 / 16;
+}
+
+/* Instagram's embed wraps the 9:16 reel in white chrome: a profile
+   header (~54px) above and actions/likes/comment rows (~250px) below.
+   The embed fits the video to the iframe's LEFTOVER height, so the
+   iframe is sized to leave exactly a 9:16 box of height and shifted
+   up — the video fills the screen, the chrome falls outside it. */
+.screenEmbed {
+  aspect-ratio: 9 / 16;
+}
+
+.iframe {
+  position: absolute;
+  top: -54px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 304px);
+  border: none;
+  display: block;
+}
+
+.videoLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Corner hint, revealed on hover (always subtly visible on touch) */
+.videoHint {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-family: var(--font-hand);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--accent-yellow);
+  border: 2px solid var(--ink);
+  padding: 2px 8px;
+  transform: rotate(-2deg);
+  opacity: 0.85;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.videoLink:hover .videoHint {
+  opacity: 1;
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* Empty slot — hand-drawn "coming soon" screen */
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--bg);
+  background:
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.04) 0 10px, transparent 10px 20px);
+  text-align: center;
+  padding: 16px;
+}
+
+.placeholder:hover {
+  text-decoration: none;
+}
+
+.playBtn {
+  width: 64px;
+  height: 64px;
+  animation: spin 14s linear infinite;
+}
+
+.placeholder:hover .playBtn {
+  animation-duration: 4s;
+}
+
+.placeholderText {
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  transform: rotate(-2deg);
+}
+
+.placeholderHandle {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--accent-yellow);
+  letter-spacing: 1px;
+}
+
+.note {
+  margin-top: 14px;
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--bg);
+  transform: rotate(-1deg);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .playBtn {
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .header {
+    flex-direction: column;
+  }
+}

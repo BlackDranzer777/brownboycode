@@ -8,6 +8,10 @@ import Navbar from "@/components/Navbar/Navbar";
 import TornEdge from "@/components/TornEdge/TornEdge";
 import Brands from "@/components/Brands/Brands";
 import Stadiums from "@/components/Stadiums/Stadiums";
+import RightNow from "@/components/RightNow/RightNow";
+import LiveBanner from "@/components/LiveBanner/LiveBanner";
+import ReelsWall from "@/components/ReelsWall/ReelsWall";
+import WCDiary from "@/components/WCDiary/WCDiary";
 
 export default function Home() {
   return (
@@ -16,6 +20,7 @@ export default function Home() {
       <main>
         {/* cream */}
         <Hero />
+        <RightNow />
         <About />
 
         {/* cream → dark: torn dark edge */}
@@ -23,6 +28,7 @@ export default function Home() {
 
         {/* dark */}
         <Content />
+        <ReelsWall />
 
         {/* dark → cream: torn cream edge */}
         <TornEdge fromDark={true} />
@@ -30,6 +36,7 @@ export default function Home() {
         {/* cream */}
         <Brands />
         <Stadiums />
+        <WCDiary />
         <BrandCollab />
         <BookCall />
 
@@ -37,6 +44,7 @@ export default function Home() {
         <TornEdge fromDark={false} />
       </main>
       <Footer />
+      <LiveBanner />
     </>
   );
 }

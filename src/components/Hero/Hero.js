@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Hero.module.css";
+import status from "@/data/status";
 
 export default function Hero() {
   return (
@@ -33,10 +34,11 @@ export default function Hero() {
         <div className={styles.imageBlock}>
           <div className={styles.imageWrapper}>
             <Image
-              src="/kunal.jpeg"
-              alt="Kunal Dutt"
+              src="/wc_photo.jpeg"
+              alt="Kunal Dutt in the stands at the FIFA World Cup 2026"
               fill
-              style={{ objectFit: "cover", objectPosition: "top" }}
+              sizes="(max-width: 768px) 260px, 340px"
+              style={{ objectFit: "cover", objectPosition: "center" }}
               priority
             />
           </div>
@@ -59,7 +61,7 @@ export default function Hero() {
               <line x1="7.5" y1="8.5" x2="5" y2="12" stroke="#fff" strokeWidth="1" strokeLinecap="round"/>
               <line x1="7" y1="6.5" x2="3" y2="5" stroke="#fff" strokeWidth="1" strokeLinecap="round"/>
             </svg>
-            Based in Europe
+            {status.heroBadge}
           </div>
         </div>
       </div>

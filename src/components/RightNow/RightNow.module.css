@@ -1,0 +1,67 @@
+/* A strip of washi tape slapped across the page, carrying the news. */
+.strip {
+  overflow: hidden;
+  background: var(--accent-yellow);
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 10px 0;
+  /* Slightly wider than the page so the tilt never shows bare corners */
+  width: 104vw;
+  margin-left: -2vw;
+  transform: rotate(-0.7deg);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 32s linear infinite;
+}
+
+.strip:hover .track {
+  animation-play-state: paused;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 20px;
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  animation: twirl 6s ease-in-out infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes twirl {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+  .star {
+    animation: none;
+  }
+}
