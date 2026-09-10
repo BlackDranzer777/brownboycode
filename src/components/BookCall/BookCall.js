@@ -1,11 +1,12 @@
 import styles from "./BookCall.module.css";
-import { IconPencil, IconBook, IconFootball, IconLock } from "@/components/Icons/Icons";
+import { IconPlane, IconCamera, IconBook, IconHandshake } from "@/components/Icons/Icons";
 
+// What people actually book me for. Edit freely.
 const perks = [
-  { icon: <IconPencil color="var(--accent)" size={22} />, text: "30-min focused conversation" },
-  { icon: <IconBook color="var(--accent)" size={22} />,   text: "Honest advice, no fluff" },
-  { icon: <IconFootball color="var(--accent)" size={22} />, text: "Yes, we can talk football too" },
-  { icon: <IconLock color="var(--accent)" size={22} />,   text: "Fully private & personal" },
+  { icon: <IconPlane color="var(--accent)" size={22} />,     text: "Where to take your life next" },
+  { icon: <IconCamera color="var(--accent)" size={22} />,    text: "Content creation, end to end" },
+  { icon: <IconBook color="var(--accent)" size={22} />,      text: "Mindset — the unglamorous part" },
+  { icon: <IconHandshake color="var(--accent)" size={22} />, text: "Webinars for your team" },
 ];
 
 export default function BookCall() {
@@ -19,8 +20,9 @@ export default function BookCall() {
               stroke="var(--accent-yellow)" strokeWidth="3" fill="none" strokeLinecap="round" />
           </svg>
           <p className={styles.desc}>
-            Book a 1-on-1 call with me. We can talk about content creation,
-            football, books, life advice — or literally anything on your mind.
+            Not every conversation needs a contract. Book a 1-on-1 and we can go
+            into content, mindset, what to do next — or bring me in to run a
+            webinar for your whole team.
           </p>
 
           <ul className={styles.perks}>

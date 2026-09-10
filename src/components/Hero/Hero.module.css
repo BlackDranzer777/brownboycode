@@ -47,9 +47,9 @@
 
 .name {
   font-family: var(--font-hand);
-  font-size: clamp(5rem, 12vw, 9rem);
+  font-size: clamp(2.6rem, 6.4vw, 5rem);
   font-weight: 700;
-  line-height: 0.9;
+  line-height: 1.02;
   margin-bottom: 24px;
   letter-spacing: -2px;
 }

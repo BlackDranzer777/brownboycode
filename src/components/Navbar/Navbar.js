@@ -15,10 +15,10 @@ export default function Navbar() {
         <div className={styles.right}>
           {/* Desktop links */}
           <ul className={styles.links}>
-            <li><a href="#about">about</a></li>
-            <li><a href="#content">content</a></li>
-            <li><a href="#collab">collabs</a></li>
-            <li><a href="#call" className={styles.cta}>book a call</a></li>
+            <li><a href="#services">what you get</a></li>
+            <li><a href="#proof">proof</a></li>
+            <li><a href="#brands">brands</a></li>
+            <li><a href="#collab" className={styles.cta}>work with me</a></li>
           </ul>
 
           {/* Theme toggle */}
@@ -48,10 +48,10 @@ export default function Navbar() {
       {/* Mobile drawer */}
       <div className={`${styles.drawer} ${open ? styles.drawerOpen : ""}`}>
         <ul className={styles.drawerLinks}>
-          <li><a href="#about" onClick={() => setOpen(false)}>about</a></li>
-          <li><a href="#content" onClick={() => setOpen(false)}>content</a></li>
-          <li><a href="#collab" onClick={() => setOpen(false)}>collabs</a></li>
-          <li><a href="#call" onClick={() => setOpen(false)} className={styles.drawerCta}>book a call</a></li>
+          <li><a href="#services" onClick={() => setOpen(false)}>what you get</a></li>
+          <li><a href="#proof" onClick={() => setOpen(false)}>proof</a></li>
+          <li><a href="#brands" onClick={() => setOpen(false)}>brands</a></li>
+          <li><a href="#collab" onClick={() => setOpen(false)} className={styles.drawerCta}>work with me</a></li>
         </ul>
       </div>
     </>

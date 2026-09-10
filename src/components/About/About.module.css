@@ -82,7 +82,8 @@
 
 .pillarLabel {
   font-family: var(--font-hand);
-  font-size: 1.4rem;
+  font-size: 1.25rem;
+  line-height: 1.15;
   font-weight: 700;
 }
 

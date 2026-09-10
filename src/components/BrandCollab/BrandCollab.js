@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import styles from "./BrandCollab.module.css";
-import { IconFootball, IconBook, IconCamera } from "@/components/Icons/Icons";
 
 export default function BrandCollab() {
   const [form, setForm] = useState({ name: "", brand: "", message: "", budget: "" });
@@ -37,16 +36,12 @@ export default function BrandCollab() {
               <span className={styles.statLabel}>Instagram followers</span>
             </div>
             <div className={styles.stat}>
-              <span className={styles.statNum} style={{ display: "flex", gap: 6, alignItems: "center" }}>
-                <IconFootball size={22} />
-                <IconBook size={22} />
-                <IconCamera size={22} />
-              </span>
-              <span className={styles.statLabel}>Football, Books, Life</span>
+              <span className={styles.statNum}>10+</span>
+              <span className={styles.statLabel}>Brands across 7 industries</span>
             </div>
             <div className={styles.stat}>
-              <span className={styles.statNum}>Nivia +</span>
-              <span className={styles.statLabel}>Past collaborations</span>
+              <span className={styles.statNum}>10 yrs</span>
+              <span className={styles.statLabel}>Living &amp; building in Europe</span>
             </div>
           </div>
 

@@ -12,11 +12,11 @@ export default function Hero() {
 
       <div className={styles.content}>
         <div className={styles.textBlock}>
-          <p className={styles.handle}>@brownboycode</p>
-          <h1 className={styles.name}>Kunal<br />Dutt</h1>
+          <p className={styles.handle}>Kunal Dutt · @brownboycode</p>
+          <h1 className={styles.name}>I make people want<br />what you&apos;re selling.</h1>
           <p className={styles.tagline}>
-            Football. Mindset. Life.<br />
-            <span className={styles.highlight}>& everything in between.</span>
+            Storytelling that sells — for founders &amp; brands.<br />
+            <span className={styles.highlight}>Doesn&apos;t matter what the product is.</span>
           </p>
           <div className={styles.badge}>
             <svg viewBox="0 0 100 30" className={styles.badgeSvg}>
@@ -26,8 +26,8 @@ export default function Hero() {
             <span>100K+ followers</span>
           </div>
           <div className={styles.ctas}>
-            <a href="#call" className={styles.btnPrimary}>Book a 1-1 Call →</a>
-            <a href="#collab" className={styles.btnSecondary}>Work With Me →</a>
+            <a href="#collab" className={styles.btnPrimary}>Work With Me →</a>
+            <a href="#proof" className={styles.btnSecondary}>See The Proof →</a>
           </div>
         </div>
 
@@ -50,7 +50,7 @@ export default function Hero() {
             {/* hand-drawn arrowhead */}
             <path d="M 62,42 L 68,44 L 70,37" stroke="var(--ink)" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          {/* CR7 fan badge */}
+          {/* World Cup credibility badge */}
           <div className={styles.cr7Badge}>
             <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:16,height:16,flexShrink:0}}>
               <circle cx="8" cy="8" r="6.5" stroke="#fff" strokeWidth="1.5"/>

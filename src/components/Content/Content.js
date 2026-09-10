@@ -37,7 +37,7 @@ export default function Content() {
     <section className={`${styles.content} dark-section`} id="content">
       <div className={styles.inner}>
         <div className={styles.header}>
-          <h2 className={styles.title}>what I make</h2>
+          <h2 className={styles.title}>what my audience shows up for</h2>
           <a
             href="https://www.instagram.com/brownboycode"
             target="_blank"
@@ -69,7 +69,7 @@ export default function Content() {
               stroke="var(--bg)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
             <path d="M68,20 L72,25 L66,27" stroke="var(--bg)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
           </svg>
-          <p className={styles.igNote}>100K+ people can&apos;t be wrong</p>
+          <p className={styles.igNote}>this is the room your product walks into</p>
         </div>
       </div>
     </section>

@@ -44,9 +44,47 @@ const bangers = Bangers({
   weight: "400",
 });
 
+const SITE = "https://brownboycode.com";
+const DESCRIPTION =
+  "I help founders and brands sell through storytelling. 100K+ followers, 10+ brands across 7 industries, and the only Indian creator at the FIFA World Cup 2026.";
+
 export const metadata = {
-  title: "Kunal Dutt — @brownboycode",
-  description: "Content creator. Football. Books. Life. 100K+ on Instagram.",
+  metadataBase: new URL(SITE),
+  title: "Kunal Dutt — storytelling that sells",
+  description: DESCRIPTION,
+  keywords: [
+    "storytelling for founders",
+    "brand collaborations",
+    "content creator India",
+    "video marketing",
+    "Kunal Dutt",
+    "brownboycode",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Kunal Dutt — storytelling that sells",
+    description: DESCRIPTION,
+    url: SITE,
+    siteName: "@brownboycode",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        // TODO: swap for a purpose-built 1200x630 OG card — this portrait
+        // photo gets centre-cropped by most link previews.
+        url: "/wc_photo.jpeg",
+        width: 1170,
+        height: 1412,
+        alt: "Kunal Dutt at the FIFA World Cup 2026",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kunal Dutt — storytelling that sells",
+    description: DESCRIPTION,
+    images: ["/wc_photo.jpeg"],
+  },
 };
 
 export default function RootLayout({ children }) {

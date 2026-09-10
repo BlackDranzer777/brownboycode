@@ -88,3 +88,15 @@ export function IconLock({ color = defaults.color, size = defaults.size }) {
     </svg>
   );
 }
+
+// Lookup used by the data-driven sections (services.js names its icon
+// as a string). Keep the keys in sync with the exports above.
+export const iconByName = {
+  football: IconFootball,
+  book: IconBook,
+  camera: IconCamera,
+  plane: IconPlane,
+  handshake: IconHandshake,
+  pencil: IconPencil,
+  lock: IconLock,
+};

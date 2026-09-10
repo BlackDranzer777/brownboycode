@@ -1,0 +1,192 @@
+.section {
+  padding: 80px 40px;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ---------- the book object ---------- */
+.bookWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.book {
+  position: relative;
+  width: 240px;
+  height: 330px;
+  transform: rotate(-3deg);
+  transition: transform 0.25s;
+}
+
+.book:hover {
+  transform: rotate(0deg) translateY(-6px);
+}
+
+/* Darker strip down the left edge reads as the spine */
+.spine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 100%;
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  border-right: none;
+}
+
+.cover {
+  position: absolute;
+  inset: 0 0 0 16px;
+  border: 2px solid var(--ink);
+  background: var(--accent-yellow);
+  box-shadow: 8px 8px 0 var(--ink);
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.coverEyebrow {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.7;
+}
+
+.coverTitle {
+  font-family: var(--font-hand);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.coverHandle {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--ink);
+  margin-top: auto;
+}
+
+/* Price scribbled on a tag over the corner */
+.priceTag {
+  position: absolute;
+  top: -10px;
+  right: 6px;
+  background: var(--bg);
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  padding: 6px 14px;
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  font-weight: 700;
+  transform: rotate(6deg);
+}
+
+/* ---------- the pitch ---------- */
+.copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: var(--font-hand);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  display: inline-block;
+}
+
+.underline {
+  display: block;
+  width: 200px;
+  margin-top: 4px;
+}
+
+.sub {
+  margin-top: 16px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.chapters {
+  list-style: none;
+  margin: 24px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chapter {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.tick {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.btn {
+  align-self: flex-start;
+  padding: 14px 30px;
+  background: var(--accent);
+  color: var(--bg);
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 6px 7px 0 var(--ink);
+  text-decoration: none;
+}
+
+.btnSoon {
+  align-self: flex-start;
+  padding: 14px 30px;
+  border: 2px dashed var(--muted);
+  color: var(--muted);
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+}
+
+.note {
+  margin-top: 16px;
+  font-family: var(--font-hand);
+  font-size: 1.1rem;
+  color: var(--muted);
+  transform: rotate(-1deg);
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 24px;
+  }
+}

@@ -52,8 +52,10 @@
 
 .pill {
   display: inline-flex;
-  align-items: center;
-  padding: 10px 22px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 12px 22px;
   border: 2px solid var(--ink);
   border-radius: 2px;
   font-family: var(--font-body);
@@ -80,4 +82,30 @@
 @keyframes scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+.pillName {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+/* The category is the whole argument — it shows the range */
+.pillCategory {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.closer {
+  text-align: center;
+  margin-top: 36px;
+  padding: 0 24px;
+  font-family: var(--font-hand);
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  line-height: 1.35;
+  color: var(--ink);
 }
